@@ -10,7 +10,7 @@ This is a shell script for setting up Laravel Production environment on Ubuntu 1
 - MySQL
 - Sqlite3
 - Composer
-- Node6 (With Yarn, PM2, Bower, Grunt, and Gulp)
+- Node8 (With Yarn, PM2, Bower, Grunt, and Gulp)
 - Redis
 - Mencached
 - Beanstalkd
@@ -53,9 +53,9 @@ It will finish installation with this message:
 --
 --
 It's Done.
-Mysql Root Password: xxx你的密码xxx
+Mysql Root Password: xxxYour Passwordxxx
 Mysql Normal User: estuser
-Mysql Normal User Password: xxx你的密码xxx
+Mysql Normal User Password: xxxYour Passwordxxx
 --
 --
 ```
@@ -88,7 +88,7 @@ server {
     charset utf-8;
 
     location / {
-        try_files $uri $uri/ /index.php?$query_string;
+        try_files $uri /index.php?$query_string;
     }
 
     location = /favicon.ico { access_log off; log_not_found off; }
